@@ -10,3 +10,4 @@ appControllers
       enableFriends: true
     };
   });
+

@@ -11,4 +11,5 @@ appControllers
     $scope.settings = {
       enableFriends: true
     };
+    console.log("loaded1");
   });
