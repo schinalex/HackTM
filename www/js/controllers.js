@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+var appControllers = angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
@@ -21,8 +21,9 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+  .controller('AccountCtrl', function($scope) {
+    $scope.settings = {
+      enableFriends: true
+    };
+  })
+;

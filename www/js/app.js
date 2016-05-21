@@ -77,7 +77,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
+    .state('view', {
+      url: '/view',
+      abstract: true,
+      templateUrl: 'views/tabs/tabs.html'
+    })
+    .state('view.map', {
+      url: '/map',
+      views: {
+        'view-map': {
+          templateUrl: 'views/map/map.html',
+          controller: 'MapController'
+        }
+      }
+    })
+    .state('view.route', {
+      url: '/route',
+      views: {
+        'view-route': {
+          templateUrl: 'views/route/route.html',
+          controller: 'RouteController'
+        }
+      }
+    })
+
+
+  ;
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
