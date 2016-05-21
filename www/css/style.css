@@ -1,3 +1,14 @@
 /* Empty. Add your own CSS if you like */
 
-.angular-google-map-container { height: 600px; }
+.angular-google-map-container { height: 400px; }
+
+.labelClass {
+  padding-top:29px;
+  padding-left:2px;
+  color:#000;
+  font-family: 'open_sansregular';
+  height:61px;
+  width:37px;
+  font-size:9px;
+  line-height: 12px;
+}

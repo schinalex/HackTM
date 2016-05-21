@@ -8,7 +8,15 @@
       <ui-gmap-markers
         models="randomMarkers"
         coords="'self'"
-        icon="'icon'">
+        icon="'icon'"
+        click="markerClick"
+        labelVisible="true">
+        <ui-gmap-windows
+          show="show1()"
+          closeClick="closeClick()">
+          <div ng-non-bindable
+          >{{title}}</div>
+        </ui-gmap-windows>
       </ui-gmap-markers>
 
     </ui-gmap-google-map>

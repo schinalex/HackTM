@@ -6,31 +6,63 @@ console.log("map controller loading");
 
 appControllers
 
-  .controller('MapController', function($scope, uiGmapGoogleMapApi) {
+  .controller('MapController', function($scope, uiGmapGoogleMapApi, StationsService) {
     console.log("map controller loaded");
 
-    $scope.map = { center: { latitude: 45.745139, longitude: 21.241582 }, zoom: 16 };
+    $scope.map = { center: { latitude: 45.745139, longitude: 21.241582 }, zoom: 13 };
 
     $scope.randomMarkers = [];
 
+    var newstyle = {
+      'background-color':'red',
+      'background-size': '36.5px 61px',
+      'background-position': 'top left',
+      'background-repeat': 'no-repeat'
+    };
+
+    StationsService.getAll().then(function(data){
+      console.log("got all stations");
+      for(var i = 0; i < 6; i++){
+        var crtObj = {
+          latitude: data.data.stations[i].lat+"",
+          longitude: data.data.stations[i].lng+"",
+          title: data.data.stations[i].friendly_name,
+
+          id: i
+        };
+        $scope.randomMarkers.push(crtObj);
+        console.log(crtObj);
+      }
+      console.log(data);
+    }).catch(function(data){
+      console.log("err");
+      console.log(data);
+    });
+
     uiGmapGoogleMapApi.then(function(maps){
       console.log("loaded maps");
-      var markers = [
-        {
-          latitude: "45.745139",
-          longitude: "21.241582",
-          title: "first",
-          id: 1
-        },
-        {
-          latitude: "45.747164",
-          longitude: "21.246754",
-          title: "second",
-          id: 2
-        }
-      ];
-      for(let marker of markers){
-        $scope.randomMarkers.push(marker);
-      }
     });
+
+    $scope.markerClick = function () {
+      console.log("marker click");
+    };
+
+
+    //asta nu face nimic interesant(nici cu return true nici cu false)
+    $scope.show1 = function () {
+        //console.log("shown123");
+        //console.log(this);
+        return false;
+    };
+
+    //nu functionește
+    $scope.closeClick = function () {
+        console.log("closeClick");
+        $scope.windowOptions.visible = false;
+    };
+    $scope.windowOptions = {
+      visible: false
+    };
   });
+
+//TODO: show marker label by default, not after click 
