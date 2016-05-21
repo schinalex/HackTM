@@ -21,7 +21,7 @@ appControllers
             {
               position: new google.maps.LatLng(station.lat, station.lng),
               title: station.friendly_name,
-              icon: '../../img/gri_tramvaie.png'
+              icon: '../../img/tramvaie.png'
             }
           );
         $scope.markers.push(buildingMarker);
