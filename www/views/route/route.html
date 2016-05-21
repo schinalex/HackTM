@@ -1,24 +1,17 @@
 <ion-view view-title="Route">
  <!-- <div style="height:100%"> -->
-  <ion-content>
+  <ion-content class="view">
 
   <div class="list">
 
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-android-bus"></i>
-    16
+  <a class="item item-icon-left" href="javascript:void(0);" ng-repeat="route in routes"
+     ng-if="route.visible">
+    <i class="icon {{route.iconClass}}"></i>
+    {{route.line_name}}
   </a>
 
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-android-bus"></i>
-    17
-  </a>
 
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-android-bus"></i>
-    11
 
-  </a>
 </div>
 
   	<!-- <p>shng sgfhsonsdf ndgfon jndrogs idg sslkngs gjsndongms dgksndfkvn </p>  -->
