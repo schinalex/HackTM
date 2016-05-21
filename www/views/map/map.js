@@ -11,6 +11,7 @@ appControllers
     $scope.settings = {
       enableFriends: true
     };
+
     uiGmapGoogleMapApi.the(function(maps){
       var initMap = function () {
         var stations = [
