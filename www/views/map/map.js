@@ -12,7 +12,7 @@ appControllers
       enableFriends: true
     };
 
-    uiGmapGoogleMapApi.the(function(maps){
+    uiGmapGoogleMapApi.then(function(maps){
       var initMap = function () {
         var stations = [
           {
