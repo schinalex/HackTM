@@ -1,8 +1,16 @@
 <ion-view view-title="Map">
   <ion-content class="padding">
-    <h2>Welcome to Map</h2>
-    <ui-google-map>
-      <div id="map"></div>
-    </ui-google-map>
+    <ui-gmap-google-map
+      center="map.center"
+      zoom="map.zoom"
+      draggable="true" >
+
+      <ui-gmap-markers
+        models="randomMarkers"
+        coords="'self'"
+        icon="'icon'">
+      </ui-gmap-markers>
+
+    </ui-gmap-google-map>
   </ion-content>
 </ion-view>
