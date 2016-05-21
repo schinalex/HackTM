@@ -1,0 +1,11 @@
+.mapsWrapper {
+  padding: 0;
+  bottom: 50px;
+}
+
+.mapsWrapper>*,
+.mapsWrapper>*>*,
+.mapsWrapper>*>*>*,
+.mapsWrapper>*>*>*>*{
+  height:100%;
+}
