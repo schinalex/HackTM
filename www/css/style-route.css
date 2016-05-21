@@ -1,0 +1,8 @@
+.tabs-route {
+	position:absolute; 
+	margin-bottom:0px;
+}
+
+ion-content div:first-child {
+    height: 100%;
+}
