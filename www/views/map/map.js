@@ -40,7 +40,9 @@ appControllers
     });
 
     uiGmapGoogleMapApi.then(function(maps){
+      console.log(maps);
       console.log("loaded maps");
+
     });
 
     $scope.markerClick = function () {
@@ -63,6 +65,12 @@ appControllers
     $scope.windowOptions = {
       visible: false
     };
+
+    $scope.mapClick = function(e) {
+      console.log("map clicked");
+      console.log(e);
+      console.l
+    };
   });
 
-//TODO: show marker label by default, not after click 
+//TODO: show marker label by default, not after click

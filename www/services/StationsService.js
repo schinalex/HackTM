@@ -5,7 +5,7 @@
 app.service("StationsService", function ($http) {
   this.getAll = function() {
     console.log("getting all stations");
-    return $http.get(backendUrl + "api/get_stations/");
+    return $http.get(backendUrl + "api/get_stations");
   };
 
 });
