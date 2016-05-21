@@ -24,7 +24,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
 })
   .config(['$ionicConfigProvider', function($ionicConfigProvider) {
 
-  $ionicConfigProvider.tabs.position('bottom'); // other values: top
+  $ionicConfigProvider.tabs.position('top'); // other values: top
 
 }])
 .config(function($stateProvider, $urlRouterProvider) { //uiGmapGoogleMapApiProvider
